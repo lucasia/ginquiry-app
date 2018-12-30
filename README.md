@@ -1,1 +1,1 @@
-# gintelligence
+# ginquiry
