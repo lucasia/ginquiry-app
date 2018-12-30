@@ -7,6 +7,11 @@ import android.view.Menu
 import android.view.MenuItem
 
 import kotlinx.android.synthetic.main.activity_main.*
+import android.support.v7.widget.LinearLayoutManager
+import com.lucasia.ginquiry.ui.WordListAdapter
+import android.support.v7.widget.RecyclerView
+
+
 
 class MainActivity : AppCompatActivity() {
 
@@ -19,6 +24,11 @@ class MainActivity : AppCompatActivity() {
             Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
                 .setAction("Action", null).show()
         }
+
+        val recyclerView = findViewById<RecyclerView>(R.id.recyclerview)
+        val adapter = WordListAdapter(this)
+        recyclerView.adapter = adapter
+        recyclerView.layoutManager = LinearLayoutManager(this)
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
